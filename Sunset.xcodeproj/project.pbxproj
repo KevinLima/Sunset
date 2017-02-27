@@ -15,6 +15,7 @@
 		7E14C3CF1E63865600812F46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E14C3CD1E63865600812F46 /* LaunchScreen.storyboard */; };
 		7E14C3DA1E63865600812F46 /* SunsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3D91E63865600812F46 /* SunsetTests.swift */; };
 		7E14C3E51E63865600812F46 /* SunsetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3E41E63865600812F46 /* SunsetUITests.swift */; };
+		7E14C3F31E644B4700812F46 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3F21E644B4700812F46 /* Sun.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7E14C3E01E63865600812F46 /* SunsetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunsetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E14C3E41E63865600812F46 /* SunsetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetUITests.swift; sourceTree = "<group>"; };
 		7E14C3E61E63865600812F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E14C3F21E644B4700812F46 /* Sun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7E14C3CD1E63865600812F46 /* LaunchScreen.storyboard */,
 				7E14C3D01E63865600812F46 /* Info.plist */,
 				7E14C3C81E63865600812F46 /* Sunset.xcdatamodeld */,
+				7E14C3F21E644B4700812F46 /* Sun.swift */,
 			);
 			path = Sunset;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				7E14C3CA1E63865600812F46 /* Sunset.xcdatamodeld in Sources */,
 				7E14C3C41E63865600812F46 /* ViewController.swift in Sources */,
+				7E14C3F31E644B4700812F46 /* Sun.swift in Sources */,
 				7E14C3C21E63865600812F46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
