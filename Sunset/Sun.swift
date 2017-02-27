@@ -13,7 +13,7 @@ class Sun{
 	private var sunrise: String = "07:31"
 	
 
-	private var location: String = "Hoogvliet"
+	private var location: Location = Location()
 	
 	
 	func getSunset()->String{
@@ -25,7 +25,7 @@ class Sun{
 	}
 	
 	func getLocation()->String{
-		return location
+		return location.getCity()
 	}
 	
 }
