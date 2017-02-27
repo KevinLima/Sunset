@@ -14,8 +14,8 @@ class Sun{
 	
 	private var location: Location = Location()
 	
-	private var isDownloaded: Bool = false
-	private var results = [String]()
+	private var apiURL = "http://api.sunrise-sunset.org/json?lat=51.850775&lng=-4.368332"
+	private var results = [String:AnyObject]()
 	
 	init() {
 		getJSON()
@@ -35,7 +35,7 @@ class Sun{
 	}
 	
 	func getJSON(){
-		let requestURL: NSURL = NSURL(string: "http://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400")!
+		let requestURL: NSURL = NSURL(string: apiURL)!
 		let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL as URL)
 		let session = URLSession.shared
 		let task = session.dataTask(with: urlRequest as URLRequest){
@@ -45,10 +45,27 @@ class Sun{
 			let statusCode = httpResponse.statusCode
 			
 			if statusCode == 200{
-				print(data)
+				do{
+					let parsedData = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
+					if let items = parsedData["results"] as? [String:AnyObject]{
+						if parsedData["status"] as? String == "OK"{
+							self.results = items
+							print(self.results)
+						}
+					}else{
+						print("Error while retrieving the json")
+						let statError = parsedData["status"] as? String
+						print("API error: \(statError!)")
+					}
+					
+				}catch{
+					print("error: \(error)")
+				}
+				
 			}
 		}
 		task.resume()
+		
 	}
 	
 }
