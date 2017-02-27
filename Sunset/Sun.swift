@@ -14,10 +14,11 @@ class Sun{
 	
 	private var location: Location = Location()
 	
-	private var apiURL = "http://api.sunrise-sunset.org/json?lat=51.850775&lng=-4.368332"
+	private var apiURL = "http://api.sunrise-sunset.org/json?lat=51.850775&lng=4.368332"
 	private var results = [String:AnyObject]()
 	
 	init() {
+		self.apiURL = "http://api.sunrise-sunset.org/json?lat=\(location.getLatitude())&lng=\(location.getLongitude())"
 		getJSON()
 	}
 	
@@ -51,6 +52,7 @@ class Sun{
 						if parsedData["status"] as? String == "OK"{
 							self.results = items
 							print(self.results)
+							self.setData()
 						}
 					}else{
 						print("Error while retrieving the json")
@@ -67,5 +69,10 @@ class Sun{
 		task.resume()
 		
 	}
-	
+	func setData(){
+		self.sunset = self.results["sunset"] as! String
+		self.sunrise = self.results["sunrise"] as! String
+		NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
+		
+	}
 }

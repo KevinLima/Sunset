@@ -12,12 +12,18 @@ class ViewController: UIViewController {
 	@IBOutlet weak var locationLabel: UILabel!
 	@IBOutlet weak var sunriseLabel: UILabel!
 	@IBOutlet weak var sunsetLabel: UILabel!
+	let sun = Sun()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		let sun = Sun()
+		locationLabel.text = sun.getLocation()
+		sunsetLabel.text = sun.getSunset()
+		sunriseLabel.text = sun.getSunrise()
+		NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reloadData(notification:)), name: Notification.Name("reloadData"), object: nil)
+	}
+	func reloadData(notification:Notification){
 		locationLabel.text = sun.getLocation()
 		sunsetLabel.text = sun.getSunset()
 		sunriseLabel.text = sun.getSunrise()
