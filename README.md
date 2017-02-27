@@ -1,8 +1,6 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
+#Sunset
 A simple, open source iOS app to display the sunset and sunrise of city, made in swift.
-### API's
+### Credit
 This app uses the following API's:<br>
 - **Sunset and sunrise times API** http://sunrise-sunset.org/api
 
