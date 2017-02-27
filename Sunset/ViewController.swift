@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+	@IBOutlet weak var locationLabel: UILabel!
+	@IBOutlet weak var sunriseLabel: UILabel!
+	@IBOutlet weak var sunsetLabel: UILabel!
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
+		let sun = Sun()
+		locationLabel.text = sun.getLocation()
+		sunsetLabel.text = sun.getSunset()
+		sunriseLabel.text = sun.getSunrise()
 	}
 
 	override func didReceiveMemoryWarning() {

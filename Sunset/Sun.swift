@@ -24,4 +24,8 @@ class Sun{
 		return sunrise
 	}
 	
+	func getLocation()->String{
+		return location
+	}
+	
 }
