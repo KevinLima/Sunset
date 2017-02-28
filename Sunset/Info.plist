@@ -35,6 +35,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To get the sunset and sunrise times for your current location.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Get the sunrise and sunset of your current location?</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

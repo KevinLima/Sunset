@@ -17,6 +17,7 @@
 		7E14C3E51E63865600812F46 /* SunsetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3E41E63865600812F46 /* SunsetUITests.swift */; };
 		7E14C3F31E644B4700812F46 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3F21E644B4700812F46 /* Sun.swift */; };
 		7E14C3F51E645EE800812F46 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3F41E645EE800812F46 /* Location.swift */; };
+		7E14C3F81E65ACF500812F46 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E14C3F71E65ACF500812F46 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7E14C3E61E63865600812F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E14C3F21E644B4700812F46 /* Sun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
 		7E14C3F41E645EE800812F46 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		7E14C3F71E65ACF500812F46 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E14C3F81E65ACF500812F46 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +90,7 @@
 				7E14C3D81E63865600812F46 /* SunsetTests */,
 				7E14C3E31E63865600812F46 /* SunsetUITests */,
 				7E14C3BF1E63865600812F46 /* Products */,
+				7E14C3F61E65ACF500812F46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +136,14 @@
 				7E14C3E61E63865600812F46 /* Info.plist */,
 			);
 			path = SunsetUITests;
+			sourceTree = "<group>";
+		};
+		7E14C3F61E65ACF500812F46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E14C3F71E65ACF500812F46 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
