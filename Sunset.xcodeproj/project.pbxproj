@@ -109,13 +109,13 @@
 			children = (
 				7E14C3C11E63865600812F46 /* AppDelegate.swift */,
 				7E14C3C31E63865600812F46 /* ViewController.swift */,
+				7E14C3F21E644B4700812F46 /* Sun.swift */,
+				7E14C3F41E645EE800812F46 /* Location.swift */,
 				7E14C3C51E63865600812F46 /* Main.storyboard */,
 				7E14C3CB1E63865600812F46 /* Assets.xcassets */,
 				7E14C3CD1E63865600812F46 /* LaunchScreen.storyboard */,
 				7E14C3D01E63865600812F46 /* Info.plist */,
 				7E14C3C81E63865600812F46 /* Sunset.xcdatamodeld */,
-				7E14C3F21E644B4700812F46 /* Sun.swift */,
-				7E14C3F41E645EE800812F46 /* Location.swift */,
 			);
 			path = Sunset;
 			sourceTree = "<group>";

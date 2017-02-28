@@ -9,8 +9,8 @@
 import Foundation
 class Sun{
 	
-	private var sunset: String = "18:19"
-	private var sunrise: String = "07:31"
+	private var sunset: String = "99:99"
+	private var sunrise: String = "11:11"
 	
 	private var location: Location = Location()
 	
@@ -33,6 +33,14 @@ class Sun{
 	
 	func getLocation()->String{
 		return location.getCity()
+	}
+	
+	func getLongitude()->String{
+		return location.getLongitude()
+	}
+	
+	func getLatitude()->String{
+		return location.getLatitude()
 	}
 	
 	func getJSON(){

@@ -12,21 +12,26 @@ class ViewController: UIViewController {
 	@IBOutlet weak var locationLabel: UILabel!
 	@IBOutlet weak var sunriseLabel: UILabel!
 	@IBOutlet weak var sunsetLabel: UILabel!
+	@IBOutlet weak var longitudeLabel: UILabel!
+	@IBOutlet weak var latitudeLabel: UILabel!
 	let sun = Sun()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		locationLabel.text = sun.getLocation()
-		sunsetLabel.text = sun.getSunset()
-		sunriseLabel.text = sun.getSunrise()
+		reloadData()
 		NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reloadData(notification:)), name: Notification.Name("reloadData"), object: nil)
 	}
 	func reloadData(notification:Notification){
+		reloadData()
+	}
+	func reloadData(){
 		locationLabel.text = sun.getLocation()
 		sunsetLabel.text = sun.getSunset()
 		sunriseLabel.text = sun.getSunrise()
+		longitudeLabel.text = sun.getLongitude()
+		latitudeLabel.text = sun.getLatitude()
 	}
 
 	override func didReceiveMemoryWarning() {
