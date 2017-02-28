@@ -1,5 +1,5 @@
 #Sunset
-A simple, open source iOS app to display the sunset and sunrise of city, made in swift.
+A simple, open source iOS app to display the sunset and sunrise of a city, made in swift.
 ### Credit
 This app uses the following API's:<br>
 - **Sunset and sunrise times API** http://sunrise-sunset.org/api
