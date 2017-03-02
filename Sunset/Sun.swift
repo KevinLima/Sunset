@@ -18,8 +18,12 @@ class Sun{
 	private var results = [String:AnyObject]()
 	
 	init() {
-		self.apiURL = "http://api.sunrise-sunset.org/json?lat=\(location.getLatitude())&lng=\(location.getLongitude())"
-		getJSON()
+		if Reachability.isConnectedToNetwork() == true {
+			self.apiURL = "http://api.sunrise-sunset.org/json?lat=\(location.getLatitude())&lng=\(location.getLongitude())"
+			getJSON()
+		}else{
+			print("Internet Connection not Available!")
+		}
 	}
 	
 	
