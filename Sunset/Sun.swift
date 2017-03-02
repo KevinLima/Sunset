@@ -9,8 +9,8 @@
 import Foundation
 class Sun:NSObject{
 	
-	private var sunset: String = "99:99"
-	private var sunrise: String = "11:11"
+	private var sunset: String = "Loading..."
+	private var sunrise: String = "Loading..."
 	
 	private var location: Location = Location()
 	
