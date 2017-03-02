@@ -9,8 +9,8 @@
 import Foundation
 class Sun{
 	
-	private var sunset: String = "18:19"
-	private var sunrise: String = "07:31"
+	private var sunset: String = "99:99"
+	private var sunrise: String = "11:11"
 	
 	private var location: Location = Location()
 	
@@ -18,8 +18,12 @@ class Sun{
 	private var results = [String:AnyObject]()
 	
 	init() {
-		self.apiURL = "http://api.sunrise-sunset.org/json?lat=\(location.getLatitude())&lng=\(location.getLongitude())"
-		getJSON()
+		if Reachability.isConnectedToNetwork() == true {
+			self.apiURL = "http://api.sunrise-sunset.org/json?lat=\(location.getLatitude())&lng=\(location.getLongitude())"
+			getJSON()
+		}else{
+			print("Internet Connection not Available!")
+		}
 	}
 	
 	
@@ -33,6 +37,14 @@ class Sun{
 	
 	func getLocation()->String{
 		return location.getCity()
+	}
+	
+	func getLongitude()->String{
+		return location.getLongitude()
+	}
+	
+	func getLatitude()->String{
+		return location.getLatitude()
 	}
 	
 	func getJSON(){
@@ -66,9 +78,9 @@ class Sun{
 				
 			}
 		}
-		task.resume()
-		
+		task.resume()		
 	}
+	
 	func setData(){
 		self.sunset = self.results["sunset"] as! String
 		self.sunrise = self.results["sunrise"] as! String
