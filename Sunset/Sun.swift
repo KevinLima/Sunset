@@ -74,9 +74,9 @@ class Sun{
 				
 			}
 		}
-		task.resume()
-		
+		task.resume()		
 	}
+	
 	func setData(){
 		self.sunset = self.results["sunset"] as! String
 		self.sunrise = self.results["sunrise"] as! String

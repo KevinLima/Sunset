@@ -24,6 +24,7 @@ class ViewController: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reloadData(notification:)), name: Notification.Name("reloadData"), object: nil)
 	}
 	func reloadData(notification:Notification){
+		print("Notification recieved")
 		reloadData()
 	}
 	func reloadData(){
