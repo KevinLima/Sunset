@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Sun{
+class Sun:NSObject{
 	
 	private var sunset: String = "99:99"
 	private var sunrise: String = "11:11"
@@ -17,7 +17,12 @@ class Sun{
 	private var apiURL = "http://api.sunrise-sunset.org/json?lat=51.850775&lng=4.368332"
 	private var results = [String:AnyObject]()
 	
-	init() {
+	override init(){
+		super.init()
+		NotificationCenter.default.addObserver(self, selector: #selector(Sun.retrieveSunProfile(notification:)), name: Notification.Name("retrieveSunProfile"), object: nil)
+	}
+	
+	func retrieveSunProfile(notification:Notification){
 		if Reachability.isConnectedToNetwork() == true {
 			self.apiURL = "http://api.sunrise-sunset.org/json?lat=\(location.getLatitude())&lng=\(location.getLongitude())"
 			getJSON()
@@ -71,11 +76,9 @@ class Sun{
 						let statError = parsedData["status"] as? String
 						print("API error: \(statError!)")
 					}
-					
 				}catch{
 					print("error: \(error)")
 				}
-				
 			}
 		}
 		task.resume()		
@@ -85,6 +88,5 @@ class Sun{
 		self.sunset = self.results["sunset"] as! String
 		self.sunrise = self.results["sunrise"] as! String
 		NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
-		
 	}
 }

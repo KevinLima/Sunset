@@ -17,26 +17,30 @@ class Location: NSObject, CLLocationManagerDelegate{
 	private var city: String = "Hoogvliet"
 	private var country: String = "The Netherlands"
 	let locationManager = CLLocationManager()
+	private var notificationWasSend:Bool = false
 	
 	override init() {
 		super.init()
 		
-		locationManager.delegate = self;
-		locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+		locationManager.delegate = self
+		locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
 		locationManager.requestWhenInUseAuthorization()
 		locationManager.requestLocation()
-		print(self.longitude)
-		print(self.latitude)
-		locationManager.stopUpdatingLocation()
-		NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
-		
 	}
 	
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-		let userLocation:CLLocation = locations.first!
-		self.longitude = String(format:"%f", userLocation.coordinate.longitude)
-		self.latitude = String(format:"%f", userLocation.coordinate.latitude)
-		
+		DispatchQueue.main.async {
+			let userLocation:CLLocation = locations.first!
+			if !self.notificationWasSend{
+				self.notificationWasSend = true
+				self.longitude = String(format:"%f", userLocation.coordinate.longitude)
+				self.latitude = String(format:"%f", userLocation.coordinate.latitude)
+				print("Location obtained")
+				NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
+				self.locationManager.stopUpdatingLocation()
+				NotificationCenter.default.post(name: Notification.Name("retrieveSunProfile"), object: nil)
+			}
+		}
 	}
 	
 	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
