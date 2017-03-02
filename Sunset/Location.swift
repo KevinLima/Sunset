@@ -12,8 +12,8 @@ import MapKit
 
 
 class Location: NSObject, CLLocationManagerDelegate{
-	private var longitude: String = "8.888888"
-	private var latitude: String = "22.222222"
+	private var longitude: String = "Loading..."
+	private var latitude: String = "Loading..."
 	private var city: String = "Hoogvliet"
 	private var country: String = "The Netherlands"
 	let locationManager = CLLocationManager()
