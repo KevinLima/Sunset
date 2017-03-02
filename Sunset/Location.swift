@@ -21,22 +21,26 @@ class Location: NSObject, CLLocationManagerDelegate{
 	override init() {
 		super.init()
 		
-		locationManager.delegate = self;
-		locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+		locationManager.delegate = self
+		locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
 		locationManager.requestWhenInUseAuthorization()
 		locationManager.requestLocation()
+		
 		print(self.longitude)
 		print(self.latitude)
-		locationManager.stopUpdatingLocation()
-		NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
+		
 		
 	}
 	
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-		let userLocation:CLLocation = locations.first!
-		self.longitude = String(format:"%f", userLocation.coordinate.longitude)
-		self.latitude = String(format:"%f", userLocation.coordinate.latitude)
-		
+		DispatchQueue.main.async {
+			let userLocation:CLLocation = locations.first!
+			self.longitude = String(format:"%f", userLocation.coordinate.longitude)
+			self.latitude = String(format:"%f", userLocation.coordinate.latitude)
+			print("Location obtained")
+			NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
+			self.locationManager.stopUpdatingLocation()
+		}
 	}
 	
 	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

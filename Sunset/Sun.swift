@@ -71,11 +71,9 @@ class Sun{
 						let statError = parsedData["status"] as? String
 						print("API error: \(statError!)")
 					}
-					
 				}catch{
 					print("error: \(error)")
 				}
-				
 			}
 		}
 		task.resume()		
@@ -85,6 +83,5 @@ class Sun{
 		self.sunset = self.results["sunset"] as! String
 		self.sunrise = self.results["sunrise"] as! String
 		NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
-		
 	}
 }
