@@ -19,6 +19,10 @@
 		7E14C3F51E645EE800812F46 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3F41E645EE800812F46 /* Location.swift */; };
 		7E14C3F81E65ACF500812F46 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E14C3F71E65ACF500812F46 /* MapKit.framework */; };
 		7E3F4BAA1E68B61900E7680D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3F4BA91E68B61900E7680D /* Reachability.swift */; };
+		7E3F4BB01E69FD7800E7680D /* SofiaProExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAC1E69FD7800E7680D /* SofiaProExtraLight.otf */; };
+		7E3F4BB11E69FD7800E7680D /* SofiaProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */; };
+		7E3F4BB21E69FD7800E7680D /* SofiaProRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAE1E69FD7800E7680D /* SofiaProRegular.otf */; };
+		7E3F4BB31E69FD7800E7680D /* SofiaProSemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAF1E69FD7800E7680D /* SofiaProSemiBold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		7E14C3F41E645EE800812F46 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		7E14C3F71E65ACF500812F46 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7E3F4BA91E68B61900E7680D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		7E3F4BAC1E69FD7800E7680D /* SofiaProExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProExtraLight.otf; sourceTree = "<group>"; };
+		7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProLight.otf; sourceTree = "<group>"; };
+		7E3F4BAE1E69FD7800E7680D /* SofiaProRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProRegular.otf; sourceTree = "<group>"; };
+		7E3F4BAF1E69FD7800E7680D /* SofiaProSemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProSemiBold.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 				7E14C3D01E63865600812F46 /* Info.plist */,
 				7E14C3C81E63865600812F46 /* Sunset.xcdatamodeld */,
 				7E3F4BA91E68B61900E7680D /* Reachability.swift */,
+				7E3F4BAB1E69FCEA00E7680D /* Fonts */,
 			);
 			path = Sunset;
 			sourceTree = "<group>";
@@ -147,6 +156,17 @@
 				7E14C3F71E65ACF500812F46 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E3F4BAB1E69FCEA00E7680D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7E3F4BAC1E69FD7800E7680D /* SofiaProExtraLight.otf */,
+				7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */,
+				7E3F4BAE1E69FD7800E7680D /* SofiaProRegular.otf */,
+				7E3F4BAF1E69FD7800E7680D /* SofiaProSemiBold.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +279,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E3F4BB01E69FD7800E7680D /* SofiaProExtraLight.otf in Resources */,
 				7E14C3CF1E63865600812F46 /* LaunchScreen.storyboard in Resources */,
+				7E3F4BB11E69FD7800E7680D /* SofiaProLight.otf in Resources */,
 				7E14C3CC1E63865600812F46 /* Assets.xcassets in Resources */,
 				7E14C3C71E63865600812F46 /* Main.storyboard in Resources */,
+				7E3F4BB21E69FD7800E7680D /* SofiaProRegular.otf in Resources */,
+				7E3F4BB31E69FD7800E7680D /* SofiaProSemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

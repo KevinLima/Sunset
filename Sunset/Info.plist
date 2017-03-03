@@ -47,6 +47,13 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SofiaProExtraLight.otf</string>
+		<string>SofiaProLight.otf</string>
+		<string>SofiaProRegular.otf</string>
+		<string>SofiaProSemiBold.otf</string>
+	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
