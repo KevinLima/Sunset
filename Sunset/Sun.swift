@@ -11,6 +11,7 @@ class Sun:NSObject{
 	
 	private var sunset: String = "Loading..."
 	private var sunrise: String = "Loading..."
+	private var dayLength: String = "Loading..."
 	
 	private var location: Location = Location()
 	
@@ -38,6 +39,10 @@ class Sun:NSObject{
 	
 	func getSunrise()->String{
 		return sunrise
+	}
+	
+	func getDayLength()->String{
+		return dayLength
 	}
 	
 	func getLocation()->String{
@@ -68,7 +73,7 @@ class Sun:NSObject{
 					if let items = parsedData["results"] as? [String:AnyObject]{
 						if parsedData["status"] as? String == "OK"{
 							self.results = items
-							print(self.results)
+							//print(self.results)
 							self.setData()
 						}
 					}else{
@@ -87,6 +92,8 @@ class Sun:NSObject{
 	func setData(){
 		self.sunset = self.results["sunset"] as! String
 		self.sunrise = self.results["sunrise"] as! String
+		self.dayLength = self.results["day_length"] as! String
+		
 		NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
 	}
 }

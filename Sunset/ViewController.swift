@@ -12,8 +12,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var locationLabel: UILabel!
 	@IBOutlet weak var sunriseLabel: UILabel!
 	@IBOutlet weak var sunsetLabel: UILabel!
-	@IBOutlet weak var longitudeLabel: UILabel!
-	@IBOutlet weak var latitudeLabel: UILabel!
+	@IBOutlet weak var daylengthLabel: UILabel!
 	let sun = Sun()
 	
 
@@ -34,8 +33,7 @@ class ViewController: UIViewController {
 			self.locationLabel.text = self.sun.getLocation()
 			self.sunsetLabel.text = self.sun.getSunset()
 			self.sunriseLabel.text = self.sun.getSunrise()
-			self.longitudeLabel.text = self.sun.getLongitude()
-			self.latitudeLabel.text = self.sun.getLatitude()
+			self.daylengthLabel.text = self.sun.getDayLength()
 		}
 	}
 

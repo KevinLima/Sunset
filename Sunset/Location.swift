@@ -14,9 +14,9 @@ import MapKit
 class Location: NSObject, CLLocationManagerDelegate{
 	private var longitude: String = "Loading..."
 	private var latitude: String = "Loading..."
-	private var city: String = "Hoogvliet"
-	private var country: String = "The Netherlands"
-	let locationManager = CLLocationManager()
+	private var city: String = "Swindon"
+	private var country: String = "England"
+	private let locationManager = CLLocationManager()
 	private var notificationWasSend:Bool = false
 	
 	override init() {
@@ -35,10 +35,26 @@ class Location: NSObject, CLLocationManagerDelegate{
 				self.notificationWasSend = true
 				self.longitude = String(format:"%f", userLocation.coordinate.longitude)
 				self.latitude = String(format:"%f", userLocation.coordinate.latitude)
-				print("Location obtained")
-				NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
+				
 				self.locationManager.stopUpdatingLocation()
-				NotificationCenter.default.post(name: Notification.Name("retrieveSunProfile"), object: nil)
+				
+				CLGeocoder().reverseGeocodeLocation(userLocation, completionHandler: {(placemarks, error)-> Void in
+					if placemarks != nil{
+						if placemarks!.count > 0{
+							let placemark = placemarks![0]
+							self.city = placemark.locality!
+							self.country = placemark.country!
+							NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
+							NotificationCenter.default.post(name: Notification.Name("retrieveSunProfile"), object: nil)
+						}
+					}else{
+						print("Error while obtaining city")
+					}
+					if error != nil{
+						print(error!)
+					}
+				
+				})
 			}
 		}
 	}
