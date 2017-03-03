@@ -15,6 +15,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var longitudeLabel: UILabel!
 	@IBOutlet weak var latitudeLabel: UILabel!
 	let sun = Sun()
+	
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
