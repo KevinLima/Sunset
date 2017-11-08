@@ -23,7 +23,7 @@ class Sun:NSObject{
 		NotificationCenter.default.addObserver(self, selector: #selector(Sun.retrieveSunProfile(notification:)), name: Notification.Name("retrieveSunProfile"), object: nil)
 	}
 	
-	func retrieveSunProfile(notification:Notification){
+	@objc func retrieveSunProfile(notification:Notification){
 		if Reachability.isConnectedToNetwork() == true {
 			self.apiURL = "http://api.sunrise-sunset.org/json?lat=\(location.getLatitude())&lng=\(location.getLongitude())"
 			getJSON()
