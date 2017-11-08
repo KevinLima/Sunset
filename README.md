@@ -1,4 +1,4 @@
-#Sunset
+# Sunset
 A simple, open source iOS app to display the sunset and sunrise of a city, made in swift.
 ### Credit
 This app uses the following API's:<br>
