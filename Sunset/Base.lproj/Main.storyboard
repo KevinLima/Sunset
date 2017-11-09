@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E175b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -24,69 +25,90 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sunset" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Moon-and-cloud" translatesAutoresizingMaskIntoConstraints="NO" id="YlH-OB-fpV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Moon-and-cloud" translatesAutoresizingMaskIntoConstraints="NO" id="YlH-OB-fpV">
                                 <rect key="frame" x="16" y="40" width="343" height="247"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sunsetLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcm-dF-cJF">
-                                <rect key="frame" x="188" y="347" width="171" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunsetLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcm-dF-cJF">
+                                <rect key="frame" x="188" y="347" width="171" height="17"/>
                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-IR-LZx">
-                                <rect key="frame" x="16" y="376" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-IR-LZx">
+                                <rect key="frame" x="16" y="380" width="169" height="17"/>
                                 <fontDescription key="fontDescription" name="SofiaProRegular" family="Sofia Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sunset" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-VB-VQ8">
-                                <rect key="frame" x="16" y="347" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunset" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-VB-VQ8">
+                                <rect key="frame" x="16" y="347" width="51.5" height="17"/>
                                 <fontDescription key="fontDescription" name="SofiaProRegular" family="Sofia Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUg-bd-gdc">
-                                <rect key="frame" x="16" y="318" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunrise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUg-bd-gdc">
+                                <rect key="frame" x="16" y="318" width="169" height="17"/>
                                 <fontDescription key="fontDescription" name="SofiaProRegular" family="Sofia Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="daylengthLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8r-me-ZQH">
-                                <rect key="frame" x="188" y="376" width="171" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="daylengthLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8r-me-ZQH">
+                                <rect key="frame" x="188" y="380" width="171" height="17"/>
                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="locationLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxd-Rk-1GE">
-                                <rect key="frame" x="16" y="28" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="locationLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxd-Rk-1GE">
+                                <rect key="frame" x="16" y="28" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="SofiaProSemiBold" family="Sofia Pro" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.93333333333333335" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sunriseLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iK-fw-AHI">
-                                <rect key="frame" x="188" y="318" width="171" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunriseLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iK-fw-AHI">
+                                <rect key="frame" x="263.5" y="318" width="95.5" height="17"/>
                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.2470588235" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="mcm-dF-cJF" secondAttribute="trailing" constant="16" id="1HT-mH-MV5"/>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="5iK-fw-AHI" secondAttribute="trailing" constant="16" id="1Px-H5-HMZ"/>
+                            <constraint firstItem="qxd-Rk-1GE" firstAttribute="top" secondItem="UjH-ff-JCV" secondAttribute="top" constant="8" id="2Rh-Qa-gaS"/>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="OUg-bd-gdc" secondAttribute="trailing" constant="190" id="6rK-3f-2Az"/>
+                            <constraint firstItem="mcm-dF-cJF" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="188" id="88Z-OX-W3s"/>
+                            <constraint firstItem="fyi-IR-LZx" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="9Gs-Gj-EPG"/>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="fyi-IR-LZx" secondAttribute="trailing" constant="190" id="9tG-Nt-c1y"/>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="B8r-me-ZQH" secondAttribute="trailing" constant="16" id="CNd-cV-ajL"/>
+                            <constraint firstItem="3x1-VB-VQ8" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="DJ7-Aq-DtJ"/>
+                            <constraint firstItem="qxd-Rk-1GE" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="Fxa-ZK-imQ"/>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="YlH-OB-fpV" secondAttribute="trailing" constant="16" id="IJr-YE-JpN"/>
+                            <constraint firstItem="3x1-VB-VQ8" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="Ii6-Rt-Rr9"/>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="bottom" secondItem="B8r-me-ZQH" secondAttribute="bottom" constant="270" id="N9i-f1-czA"/>
+                            <constraint firstItem="5iK-fw-AHI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="PJ3-cH-QQQ"/>
+                            <constraint firstItem="OUg-bd-gdc" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="PYV-vc-7Yn"/>
+                            <constraint firstItem="YlH-OB-fpV" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="SF6-FF-MDZ"/>
+                            <constraint firstItem="fyi-IR-LZx" firstAttribute="top" secondItem="3x1-VB-VQ8" secondAttribute="bottom" constant="16" id="V3o-YC-13a"/>
+                            <constraint firstItem="B8r-me-ZQH" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="188" id="ZLa-oz-EUg"/>
+                            <constraint firstItem="5iK-fw-AHI" firstAttribute="top" secondItem="YlH-OB-fpV" secondAttribute="bottom" constant="31" id="evi-em-FHy"/>
+                            <constraint firstItem="3x1-VB-VQ8" firstAttribute="top" secondItem="OUg-bd-gdc" secondAttribute="bottom" constant="12" id="fGP-4i-jJt"/>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="bottom" secondItem="YlH-OB-fpV" secondAttribute="bottom" constant="380" id="g2j-Fo-kxH"/>
+                            <constraint firstItem="OUg-bd-gdc" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="kYw-CZ-LDA"/>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="bottom" secondItem="fyi-IR-LZx" secondAttribute="bottom" constant="270" id="oBi-Lr-OTs"/>
+                            <constraint firstItem="mcm-dF-cJF" firstAttribute="top" secondItem="5iK-fw-AHI" secondAttribute="bottom" constant="12" id="p1b-hL-YTY"/>
+                            <constraint firstItem="mcm-dF-cJF" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="188" id="pNB-LH-XnO"/>
+                            <constraint firstItem="OUg-bd-gdc" firstAttribute="top" secondItem="YlH-OB-fpV" secondAttribute="bottom" constant="31" id="s6s-Sh-cQy"/>
+                            <constraint firstItem="YlH-OB-fpV" firstAttribute="top" secondItem="qxd-Rk-1GE" secondAttribute="bottom" constant="-8" id="tQL-xz-PmG"/>
+                            <constraint firstItem="B8r-me-ZQH" firstAttribute="leading" secondItem="mcm-dF-cJF" secondAttribute="trailing" constant="-171" id="y3U-Ip-erC"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3x1-VB-VQ8" secondAttribute="trailing" constant="20" symbolic="YES" id="zV8-y0-tSH"/>
+                            <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="qxd-Rk-1GE" secondAttribute="trailing" constant="16" id="znZ-C1-V23"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UjH-ff-JCV"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
