@@ -23,6 +23,8 @@
 		7E3F4BB11E69FD7800E7680D /* SofiaProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */; };
 		7E3F4BB21E69FD7800E7680D /* SofiaProRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAE1E69FD7800E7680D /* SofiaProRegular.otf */; };
 		7E3F4BB31E69FD7800E7680D /* SofiaProSemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAF1E69FD7800E7680D /* SofiaProSemiBold.otf */; };
+		7ECE8E441FB48BED00D56D72 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE8E431FB48BED00D56D72 /* SettingsView.swift */; };
+		7ECE8E461FB48C1D00D56D72 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProLight.otf; sourceTree = "<group>"; };
 		7E3F4BAE1E69FD7800E7680D /* SofiaProRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProRegular.otf; sourceTree = "<group>"; };
 		7E3F4BAF1E69FD7800E7680D /* SofiaProSemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProSemiBold.otf; sourceTree = "<group>"; };
+		7ECE8E431FB48BED00D56D72 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				7E14C3C81E63865600812F46 /* Sunset.xcdatamodeld */,
 				7E3F4BA91E68B61900E7680D /* Reachability.swift */,
 				7E3F4BAB1E69FCEA00E7680D /* Fonts */,
+				7ECE8E431FB48BED00D56D72 /* SettingsView.swift */,
+				7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */,
 			);
 			path = Sunset;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				7E3F4BB11E69FD7800E7680D /* SofiaProLight.otf in Resources */,
 				7E14C3CC1E63865600812F46 /* Assets.xcassets in Resources */,
 				7E14C3C71E63865600812F46 /* Main.storyboard in Resources */,
+				7ECE8E461FB48C1D00D56D72 /* SettingsView.xib in Resources */,
 				7E3F4BB21E69FD7800E7680D /* SofiaProRegular.otf in Resources */,
 				7E3F4BB31E69FD7800E7680D /* SofiaProSemiBold.otf in Resources */,
 			);
@@ -313,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECE8E441FB48BED00D56D72 /* SettingsView.swift in Sources */,
 				7E14C3CA1E63865600812F46 /* Sunset.xcdatamodeld in Sources */,
 				7E14C3C41E63865600812F46 /* ViewController.swift in Sources */,
 				7E3F4BAA1E68B61900E7680D /* Reachability.swift in Sources */,
