@@ -131,9 +131,9 @@
 				7E14C3D01E63865600812F46 /* Info.plist */,
 				7E14C3C81E63865600812F46 /* Sunset.xcdatamodeld */,
 				7E3F4BA91E68B61900E7680D /* Reachability.swift */,
-				7E3F4BAB1E69FCEA00E7680D /* Fonts */,
 				7ECE8E431FB48BED00D56D72 /* SettingsView.swift */,
 				7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */,
+				7E3F4BAB1E69FCEA00E7680D /* Fonts */,
 			);
 			path = Sunset;
 			sourceTree = "<group>";

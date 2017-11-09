@@ -17,5 +17,9 @@ class SettingsView: UIView {
         // Drawing code
     }
     */
+    
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: "SettingsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+    }
 
 }

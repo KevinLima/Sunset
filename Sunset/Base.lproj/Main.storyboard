@@ -69,19 +69,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunriseLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iK-fw-AHI">
-                                <rect key="frame" x="262.5" y="318" width="96.5" height="20"/>
+                                <rect key="frame" x="263" y="318" width="96" height="20"/>
                                 <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrq-aY-zaV">
-                                <rect key="frame" x="158.5" y="577" width="57" height="45"/>
+                                <rect key="frame" x="159" y="577" width="57" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="vZ3-vf-Pbz"/>
                                 </constraints>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="settingsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gny-HD-8JG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.18823529410000001" green="0.2470588235" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,6 +128,7 @@
                     <connections>
                         <outlet property="daylengthLabel" destination="B8r-me-ZQH" id="4gp-Be-Hod"/>
                         <outlet property="locationLabel" destination="qxd-Rk-1GE" id="QVU-KR-e9d"/>
+                        <outlet property="settingsButtonOutlet" destination="Mrq-aY-zaV" id="EX8-U2-nk9"/>
                         <outlet property="sunriseLabel" destination="5iK-fw-AHI" id="5AS-Cq-5vo"/>
                         <outlet property="sunsetLabel" destination="mcm-dF-cJF" id="zMe-mT-lRR"/>
                     </connections>
