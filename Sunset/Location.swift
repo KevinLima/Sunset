@@ -44,7 +44,7 @@ class Location: NSObject, CLLocationManagerDelegate{
 							let placemark = placemarks![0]
 							self.city = placemark.locality!
 							self.country = placemark.country!
-							NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
+							//NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
 							NotificationCenter.default.post(name: Notification.Name("retrieveSunProfile"), object: nil)
 						}
 					}else{
