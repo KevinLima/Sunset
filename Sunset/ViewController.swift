@@ -81,7 +81,7 @@ class ViewController: UIViewController, UITableViewDataSource {
      */
     @objc func reloadData(notification:Notification){
 		print("Reload notification recieved")
-		reloadData()
+		presentSunData()
 	}
     
     /**
@@ -95,7 +95,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     /**
         Presents the new sun profile data in the view
      */
-	func reloadData(){
+	func presentSunData(){
 		DispatchQueue.main.async {
             self.dataKeys = self.sun.getKeys()
             self.dataValues = self.sun.getValues()
