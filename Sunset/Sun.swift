@@ -56,6 +56,33 @@ class Sun:NSObject{
 	func getLatitude()->String{
 		return location.getLatitude()
 	}
+    func getKeys()->[String]{
+        let array = ["Sunset",
+                     "Sunrise",
+                     "Day length",
+                     "Solar noon",
+                     "Civil twilight begin",
+                     "Civil twilight end",
+                     "Nautical twilight begin",
+                     "Nautical twilight end",
+                     "Astronomical twilight begin",
+                     "Astronomical twilight end"]
+        return array
+    }
+    func getValues()->[String]{
+        var array : [String] = []
+        array.append(self.results["sunset"] as! String)
+        array.append(self.results["sunrise"] as! String)
+        array.append(self.results["day_length"] as! String)
+        array.append(self.results["solar_noon"] as! String)
+        array.append(self.results["civil_twilight_begin"] as! String)
+        array.append(self.results["civil_twilight_end"] as! String)
+        array.append(self.results["nautical_twilight_begin"] as! String)
+        array.append(self.results["nautical_twilight_end"] as! String)
+        array.append(self.results["astronomical_twilight_begin"] as! String)
+        array.append(self.results["astronomical_twilight_end"] as! String)
+        return array
+    }
 	
 	func getJSON(){
 		let requestURL: NSURL = NSURL(string: apiURL)!
@@ -73,7 +100,7 @@ class Sun:NSObject{
 					if let items = parsedData["results"] as? [String:AnyObject]{
 						if parsedData["status"] as? String == "OK"{
 							self.results = items
-							//print(self.results)
+							print(self.results)
 							self.setData()
 						}
 					}else{
@@ -93,7 +120,11 @@ class Sun:NSObject{
 		self.sunset = self.results["sunset"] as! String
 		self.sunrise = self.results["sunrise"] as! String
 		self.dayLength = self.results["day_length"] as! String
+        
 		
 		NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
 	}
+    func getDataCount()->Int{
+        return self.results.count
+    }
 }
