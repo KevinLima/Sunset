@@ -70,9 +70,9 @@ class Sun:NSObject{
         return array
     }
     func getValues()->[String]{
-        var array = [""]
-        array.append(self.results["sunrise"] as! String)
+        var array : [String] = []
         array.append(self.results["sunset"] as! String)
+        array.append(self.results["sunrise"] as! String)
         array.append(self.results["day_length"] as! String)
         array.append(self.results["solar_noon"] as! String)
         array.append(self.results["civil_twilight_begin"] as! String)
@@ -100,7 +100,7 @@ class Sun:NSObject{
 					if let items = parsedData["results"] as? [String:AnyObject]{
 						if parsedData["status"] as? String == "OK"{
 							self.results = items
-							//print(self.results)
+							print(self.results)
 							self.setData()
 						}
 					}else{
