@@ -13,22 +13,18 @@ class ViewController: UIViewController, UITableViewDataSource {
 	@IBOutlet weak var sunriseLabel: UILabel!
 	@IBOutlet weak var sunsetLabel: UILabel!
 	@IBOutlet weak var daylengthLabel: UILabel!
-    @IBOutlet weak var settingsButtonOutlet: UIButton!
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    let settingsView = SettingsView.instanceFromNib()
-    var settingsActive = false
     let sun = Sun()
     var dataKeys = [String]()
-    var dataValues = [String]()
+    var dataValues = [Date]()
+    var twentyFourHourClock = true
 	
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		tableView.dataSource = self
-		//reloadData()
 		NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reloadData(notification:)), name: Notification.Name("reloadData"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.receiveLocation(notification:)), name: Notification.Name("receiveLocation"), object: nil)
 	}
@@ -37,8 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return self.sun.getDataCount()
-        return 10
+        return self.sun.getDataCount()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reusableCell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath)
@@ -46,34 +41,17 @@ class ViewController: UIViewController, UITableViewDataSource {
             reusableCell.textLabel?.text = "Row \(indexPath.row)"
         }else{
             reusableCell.textLabel?.text = self.dataKeys[indexPath.row]
-            reusableCell.detailTextLabel?.text = self.dataValues[indexPath.row]
+            
+            let dateFormatter = DateFormatter()
+            
+            dateFormatter.dateFormat = "HH:mm"
+            if !self.twentyFourHourClock{
+                dateFormatter.dateFormat = "h:mm a"
+            }
+            
+            reusableCell.detailTextLabel?.text = dateFormatter.string(from: self.dataValues[indexPath.row])
         }
         return reusableCell
-    }
-    
-    override func updateViewConstraints() {
-        super.updateViewConstraints()
-        
-        settingsView.translatesAutoresizingMaskIntoConstraints = false
-        let topConstraint = NSLayoutConstraint(item: settingsView, attribute: .top, relatedBy: .equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 0)
-        let leadingConstraint = NSLayoutConstraint(item: settingsView, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0)
-        let trailingConstraint = NSLayoutConstraint(item: settingsView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0)
-        let bottomConstraint = NSLayoutConstraint(item: settingsView, attribute: .bottom, relatedBy: .equal, toItem:settingsButtonOutlet , attribute: .top, multiplier: 1, constant: 0)
-        
-        self.view.addSubview(settingsView)
-        self.view.addConstraints([topConstraint, leadingConstraint, trailingConstraint, bottomConstraint])
-    }
-	
-    @IBAction func settingsButtonAction(_ sender: Any) {
-        if settingsActive{
-            settingsView.isHidden = true
-            settingsActive = false
-            settingsButtonOutlet.setTitle("Settings", for: .normal)
-        }else{
-            settingsView.isHidden = false
-            settingsActive = true
-            settingsButtonOutlet.setTitle("Back", for: .normal)
-        }
     }
     
     /**

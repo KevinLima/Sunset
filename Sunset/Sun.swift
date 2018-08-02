@@ -25,7 +25,8 @@ class Sun:NSObject{
 	
 	@objc func retrieveSunProfile(notification:Notification){
 		if Reachability.isConnectedToNetwork() == true {
-			self.apiURL = "http://api.sunrise-sunset.org/json?lat=\(location.getLatitude())&lng=\(location.getLongitude())"
+            self.apiURL = "http://api.sunrise-sunset.org/json?lat=\(location.getLatitude())&lng=\(location.getLongitude())"
+            print(self.apiURL)
 			getJSON()
 		}else{
 			print("Internet Connection not Available!")
@@ -56,10 +57,10 @@ class Sun:NSObject{
 	func getLatitude()->String{
 		return location.getLatitude()
 	}
+    //TODO: day length
     func getKeys()->[String]{
         let array = ["Sunset",
                      "Sunrise",
-                     "Day length",
                      "Solar noon",
                      "Civil twilight begin",
                      "Civil twilight end",
@@ -69,19 +70,30 @@ class Sun:NSObject{
                      "Astronomical twilight end"]
         return array
     }
-    func getValues()->[String]{
-        var array : [String] = []
-        array.append(self.results["sunset"] as! String)
-        array.append(self.results["sunrise"] as! String)
-        array.append(self.results["day_length"] as! String)
-        array.append(self.results["solar_noon"] as! String)
-        array.append(self.results["civil_twilight_begin"] as! String)
-        array.append(self.results["civil_twilight_end"] as! String)
-        array.append(self.results["nautical_twilight_begin"] as! String)
-        array.append(self.results["nautical_twilight_end"] as! String)
-        array.append(self.results["astronomical_twilight_begin"] as! String)
-        array.append(self.results["astronomical_twilight_end"] as! String)
-        return array
+    //TODO: day length
+    //array.append(self.results["day_length"] as! String)
+    func getValues()->[Date]{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm:ss a"
+        
+        var array : [Date] = []
+        array.append(dateFormatter.date(from: self.results["sunset"] as! String)!)
+        array.append(dateFormatter.date(from: self.results["sunrise"] as! String)!)
+        array.append(dateFormatter.date(from: self.results["solar_noon"] as! String)!)
+        array.append(dateFormatter.date(from: self.results["civil_twilight_begin"] as! String)!)
+        array.append(dateFormatter.date(from: self.results["civil_twilight_end"] as! String)!)
+        array.append(dateFormatter.date(from: self.results["nautical_twilight_begin"] as! String)!)
+        array.append(dateFormatter.date(from: self.results["nautical_twilight_end"] as! String)!)
+        array.append(dateFormatter.date(from: self.results["astronomical_twilight_begin"] as! String)!)
+        array.append(dateFormatter.date(from: self.results["astronomical_twilight_end"] as! String)!)
+        
+        var timeZoneArray :[Date] = []
+        var secondsFromGMT: Int {return TimeZone.current.secondsFromGMT()}
+        
+        for result in array{
+            timeZoneArray.append(result.addingTimeInterval(Double(secondsFromGMT)))
+        }
+        return timeZoneArray
     }
 	
 	func getJSON(){
@@ -100,7 +112,6 @@ class Sun:NSObject{
 					if let items = parsedData["results"] as? [String:AnyObject]{
 						if parsedData["status"] as? String == "OK"{
 							self.results = items
-							print(self.results)
 							self.setData()
 						}
 					}else{
@@ -125,6 +136,7 @@ class Sun:NSObject{
 		NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
 	}
     func getDataCount()->Int{
-        return self.results.count
+        //return self.results.count
+        return 9
     }
 }
