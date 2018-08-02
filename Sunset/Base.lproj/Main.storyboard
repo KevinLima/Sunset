@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,23 +35,11 @@
                                 <color key="textColor" red="1" green="0.93333333333333335" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrq-aY-zaV">
-                                <rect key="frame" x="159" y="577" width="57" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="vZ3-vf-Pbz"/>
-                                </constraints>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="settingsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gny-HD-8JG"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lWm-s1-Wcv">
-                                <rect key="frame" x="0.0" y="279" width="375" height="297"/>
+                                <rect key="frame" x="0.0" y="295" width="375" height="372"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="297" id="WHx-Ws-UUV"/>
+                                    <constraint firstAttribute="height" constant="372" id="WHx-Ws-UUV"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="reusableCell" textLabel="FhX-nR-0gd" detailTextLabel="pcE-Wj-dWN" style="IBUITableViewCellStyleValue1" id="scB-n2-Kj5">
@@ -87,14 +75,12 @@
                         <constraints>
                             <constraint firstItem="qxd-Rk-1GE" firstAttribute="top" secondItem="UjH-ff-JCV" secondAttribute="top" constant="8" id="2Rh-Qa-gaS"/>
                             <constraint firstItem="lWm-s1-Wcv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Fs-lJ-zwy"/>
+                            <constraint firstItem="lWm-s1-Wcv" firstAttribute="bottom" secondItem="UjH-ff-JCV" secondAttribute="bottom" id="Bdk-Q5-Zhu"/>
                             <constraint firstItem="qxd-Rk-1GE" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="Fxa-ZK-imQ"/>
                             <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="YlH-OB-fpV" secondAttribute="trailing" constant="16" id="IJr-YE-JpN"/>
-                            <constraint firstItem="UjH-ff-JCV" firstAttribute="bottom" secondItem="Mrq-aY-zaV" secondAttribute="bottom" constant="45" id="MSp-Nv-lQI"/>
+                            <constraint firstItem="lWm-s1-Wcv" firstAttribute="centerX" secondItem="YlH-OB-fpV" secondAttribute="centerX" id="NEW-k3-uHa"/>
                             <constraint firstItem="YlH-OB-fpV" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="SF6-FF-MDZ"/>
-                            <constraint firstItem="lWm-s1-Wcv" firstAttribute="centerX" secondItem="Mrq-aY-zaV" secondAttribute="centerX" id="aYX-S4-qD2"/>
-                            <constraint firstItem="Mrq-aY-zaV" firstAttribute="centerX" secondItem="UjH-ff-JCV" secondAttribute="centerX" id="b9M-gb-c5J"/>
                             <constraint firstItem="UjH-ff-JCV" firstAttribute="bottom" secondItem="YlH-OB-fpV" secondAttribute="bottom" constant="380" id="g2j-Fo-kxH"/>
-                            <constraint firstItem="Mrq-aY-zaV" firstAttribute="top" secondItem="lWm-s1-Wcv" secondAttribute="bottom" constant="1" id="gBH-P8-oln"/>
                             <constraint firstItem="YlH-OB-fpV" firstAttribute="top" secondItem="qxd-Rk-1GE" secondAttribute="bottom" constant="-8" id="tQL-xz-PmG"/>
                             <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="qxd-Rk-1GE" secondAttribute="trailing" constant="16" id="znZ-C1-V23"/>
                         </constraints>
@@ -103,7 +89,6 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="locationLabel" destination="qxd-Rk-1GE" id="QVU-KR-e9d"/>
-                        <outlet property="settingsButtonOutlet" destination="Mrq-aY-zaV" id="EX8-U2-nk9"/>
                         <outlet property="tableView" destination="lWm-s1-Wcv" id="xed-Z2-nlz"/>
                     </connections>
                 </viewController>
