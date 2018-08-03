@@ -25,8 +25,14 @@ class ViewController: UIViewController, UITableViewDataSource {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		tableView.dataSource = self
+        
 		NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reloadData(notification:)), name: Notification.Name("reloadData"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.receiveLocation(notification:)), name: Notification.Name("receiveLocation"), object: nil)
+        
+        // Double tap
+        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        doubleTap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTap)
 	}
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,6 +58,10 @@ class ViewController: UIViewController, UITableViewDataSource {
             reusableCell.detailTextLabel?.text = dateFormatter.string(from: self.dataValues[indexPath.row])
         }
         return reusableCell
+    }
+    @objc func doubleTapped(){
+        self.twentyFourHourClock = !self.twentyFourHourClock
+        self.tableView.reloadData()
     }
     
     /**
