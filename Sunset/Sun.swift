@@ -46,9 +46,12 @@ class Sun:NSObject{
 		return dayLength
 	}
 	
-	func getLocation()->String{
+	func getCity()->String{
 		return location.getCity()
 	}
+    func getCountry()->String{
+        return location.getCountry()
+    }
 	
 	func getLongitude()->String{
 		return location.getLongitude()

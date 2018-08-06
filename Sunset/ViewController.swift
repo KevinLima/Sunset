@@ -9,8 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
-	@IBOutlet weak var locationLabel: UILabel!
-	@IBOutlet weak var sunriseLabel: UILabel!
+	@IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var sunriseLabel: UILabel!
 	@IBOutlet weak var sunsetLabel: UILabel!
 	@IBOutlet weak var daylengthLabel: UILabel!
     
@@ -96,7 +97,8 @@ class ViewController: UIViewController, UITableViewDataSource {
      */
     func presentLocation(){
         DispatchQueue.main.async {
-            self.locationLabel.text = self.sun.getLocation()
+            self.cityLabel.text = self.sun.getCity()
+            self.countryLabel.text = self.sun.getCountry()
         }
     }
 
