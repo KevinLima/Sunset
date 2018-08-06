@@ -13,9 +13,6 @@
         <array key="SofiaProLight.otf">
             <string>SofiaProLight</string>
         </array>
-        <array key="SofiaProSemiBold.otf">
-            <string>SofiaProSemiBold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -26,13 +23,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Moon-and-cloud" translatesAutoresizingMaskIntoConstraints="NO" id="YlH-OB-fpV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="iai-2g-5Q7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="33-512" translatesAutoresizingMaskIntoConstraints="NO" id="YlH-OB-fpV">
                                 <rect key="frame" x="16" y="40" width="343" height="247"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="locationLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxd-Rk-1GE">
                                 <rect key="frame" x="16" y="28" width="343" height="20"/>
-                                <fontDescription key="fontDescription" name="SofiaProSemiBold" family="Sofia Pro" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.93333333333333335" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lWm-s1-Wcv">
@@ -50,23 +50,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FhX-nR-0gd">
-                                                    <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                                    <rect key="frame" x="15" y="14" width="32.5" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pcE-Wj-dWN">
-                                                    <rect key="frame" x="316.5" y="12" width="43.5" height="20"/>
+                                                    <rect key="frame" x="315" y="14" width="45" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.18823529410000001" green="0.2470588235" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -75,13 +75,17 @@
                         <constraints>
                             <constraint firstItem="qxd-Rk-1GE" firstAttribute="top" secondItem="UjH-ff-JCV" secondAttribute="top" constant="8" id="2Rh-Qa-gaS"/>
                             <constraint firstItem="lWm-s1-Wcv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Fs-lJ-zwy"/>
+                            <constraint firstItem="iai-2g-5Q7" firstAttribute="leading" secondItem="lWm-s1-Wcv" secondAttribute="leading" id="BEi-2c-bJ6"/>
                             <constraint firstItem="lWm-s1-Wcv" firstAttribute="bottom" secondItem="UjH-ff-JCV" secondAttribute="bottom" id="Bdk-Q5-Zhu"/>
                             <constraint firstItem="qxd-Rk-1GE" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="Fxa-ZK-imQ"/>
                             <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="YlH-OB-fpV" secondAttribute="trailing" constant="16" id="IJr-YE-JpN"/>
                             <constraint firstItem="lWm-s1-Wcv" firstAttribute="centerX" secondItem="YlH-OB-fpV" secondAttribute="centerX" id="NEW-k3-uHa"/>
                             <constraint firstItem="YlH-OB-fpV" firstAttribute="leading" secondItem="UjH-ff-JCV" secondAttribute="leading" constant="16" id="SF6-FF-MDZ"/>
                             <constraint firstItem="UjH-ff-JCV" firstAttribute="bottom" secondItem="YlH-OB-fpV" secondAttribute="bottom" constant="380" id="g2j-Fo-kxH"/>
+                            <constraint firstItem="iai-2g-5Q7" firstAttribute="bottom" secondItem="UjH-ff-JCV" secondAttribute="bottom" id="qha-EQ-7jB"/>
+                            <constraint firstItem="iai-2g-5Q7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sXH-2X-1cU"/>
                             <constraint firstItem="YlH-OB-fpV" firstAttribute="top" secondItem="qxd-Rk-1GE" secondAttribute="bottom" constant="-8" id="tQL-xz-PmG"/>
+                            <constraint firstItem="iai-2g-5Q7" firstAttribute="trailing" secondItem="lWm-s1-Wcv" secondAttribute="trailing" id="xcY-bZ-MFO"/>
                             <constraint firstItem="UjH-ff-JCV" firstAttribute="trailing" secondItem="qxd-Rk-1GE" secondAttribute="trailing" constant="16" id="znZ-C1-V23"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UjH-ff-JCV"/>
@@ -94,10 +98,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="104.8" y="37.331334332833585"/>
+            <point key="canvasLocation" x="-28" y="-35"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Moon-and-cloud" width="489" height="488"/>
+        <image name="33-512" width="512" height="512"/>
+        <image name="Blue-gradient" width="640" height="1136"/>
     </resources>
 </document>

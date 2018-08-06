@@ -25,6 +25,7 @@
 		7E3F4BB31E69FD7800E7680D /* SofiaProSemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAF1E69FD7800E7680D /* SofiaProSemiBold.otf */; };
 		7ECE8E441FB48BED00D56D72 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE8E431FB48BED00D56D72 /* SettingsView.swift */; };
 		7ECE8E461FB48C1D00D56D72 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */; };
+		7ED3746A2118777B003A78D5 /* Climacons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED374692118777B003A78D5 /* Climacons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		7E3F4BAF1E69FD7800E7680D /* SofiaProSemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProSemiBold.otf; sourceTree = "<group>"; };
 		7ECE8E431FB48BED00D56D72 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		7ED374692118777B003A78D5 /* Climacons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Climacons.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		7E3F4BAB1E69FCEA00E7680D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				7ED374692118777B003A78D5 /* Climacons.ttf */,
 				7E3F4BAC1E69FD7800E7680D /* SofiaProExtraLight.otf */,
 				7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */,
 				7E3F4BAE1E69FD7800E7680D /* SofiaProRegular.otf */,
@@ -288,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED3746A2118777B003A78D5 /* Climacons.ttf in Resources */,
 				7E3F4BB01E69FD7800E7680D /* SofiaProExtraLight.otf in Resources */,
 				7E14C3CF1E63865600812F46 /* LaunchScreen.storyboard in Resources */,
 				7E3F4BB11E69FD7800E7680D /* SofiaProLight.otf in Resources */,

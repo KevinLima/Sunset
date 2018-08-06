@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Sunset.xcodeproj">
+      location = "group:../../../../../../../Downloads/Sol-master/Sol/Sol/Resources/Fonts/Climacons.ttf">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
