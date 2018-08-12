@@ -8,16 +8,12 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-    public var city = "Loading"
-    public var country = "Loading"
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(FirstViewController.receiveLocation(notification:)), name: Notification.Name("locationReady"), object: nil)
-    }
-    override func viewDidDisappear(_ animated: Bool) {
         self.reloadPresentation()
     }
     
@@ -29,6 +25,7 @@ class FirstViewController: UIViewController {
     }
     
     func reloadPresentation(){
+        // Check is label exist
         if (self.cityLabel != nil){
             if let userCity = UserDefaults.standard.object(forKey: "city") as? String{
                 self.cityLabel.text = userCity
