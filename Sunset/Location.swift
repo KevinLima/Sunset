@@ -45,6 +45,8 @@ class Location: NSObject, CLLocationManagerDelegate{
 							self.city = placemark.locality!
 							self.country = placemark.country!
                             
+                            let locationDict: [String:[String]] = ["location": [self.city, self.country]]
+                            
                             // VC to display new lcoation
 							NotificationCenter.default.post(name: Notification.Name("receiveLocation"), object: nil)
                             

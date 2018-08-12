@@ -60,20 +60,7 @@ class Sun:NSObject{
 	func getLatitude()->String{
 		return location.getLatitude()
 	}
-    //TODO: day length
-    func getKeys()->[String]{
-        let array = ["Sunset",
-                     "Sunrise",
-                     "Solar noon",
-                     "Civil twilight begin",
-                     "Civil twilight end",
-                     "Nautical twilight begin",
-                     "Nautical twilight end",
-                     "Astronomical twilight begin",
-                     "Astronomical twilight end"]
-        return array
-    }
-    //TODO: day length
+    
     //array.append(self.results["day_length"] as! String)
     func getValues()->[Date]{
         let dateFormatter = DateFormatter()
@@ -135,11 +122,10 @@ class Sun:NSObject{
 		self.sunrise = self.results["sunrise"] as! String
 		self.dayLength = self.results["day_length"] as! String
         
-		
-		NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
+        let sunProfileDict: [String: [Date]] = ["sunProfile": self.getValues()]
+        NotificationCenter.default.post(name: NSNotification.Name("reloadData"), object: nil, userInfo: sunProfileDict)
 	}
     func getDataCount()->Int{
-        //return self.results.count
         return 9
     }
 }

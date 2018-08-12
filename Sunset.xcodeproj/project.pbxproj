@@ -18,6 +18,7 @@
 		7E14C3F31E644B4700812F46 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3F21E644B4700812F46 /* Sun.swift */; };
 		7E14C3F51E645EE800812F46 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3F41E645EE800812F46 /* Location.swift */; };
 		7E14C3F81E65ACF500812F46 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E14C3F71E65ACF500812F46 /* MapKit.framework */; };
+		7E349A452118A39E00957FBB /* PageSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E349A442118A39E00957FBB /* PageSwitchViewController.swift */; };
 		7E3F4BAA1E68B61900E7680D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3F4BA91E68B61900E7680D /* Reachability.swift */; };
 		7E3F4BB01E69FD7800E7680D /* SofiaProExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAC1E69FD7800E7680D /* SofiaProExtraLight.otf */; };
 		7E3F4BB11E69FD7800E7680D /* SofiaProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */; };
@@ -26,6 +27,8 @@
 		7ECE8E441FB48BED00D56D72 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE8E431FB48BED00D56D72 /* SettingsView.swift */; };
 		7ECE8E461FB48C1D00D56D72 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */; };
 		7ED3746A2118777B003A78D5 /* Climacons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED374692118777B003A78D5 /* Climacons.ttf */; };
+		7ED3747121189F79003A78D5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3746E21189F79003A78D5 /* FirstViewController.swift */; };
+		7ED3747221189F79003A78D5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3746F21189F79003A78D5 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,7 @@
 		7E14C3F21E644B4700812F46 /* Sun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
 		7E14C3F41E645EE800812F46 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		7E14C3F71E65ACF500812F46 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7E349A442118A39E00957FBB /* PageSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSwitchViewController.swift; sourceTree = "<group>"; };
 		7E3F4BA91E68B61900E7680D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7E3F4BAC1E69FD7800E7680D /* SofiaProExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProExtraLight.otf; sourceTree = "<group>"; };
 		7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProLight.otf; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		7ECE8E431FB48BED00D56D72 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
 		7ED374692118777B003A78D5 /* Climacons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Climacons.ttf; sourceTree = "<group>"; };
+		7ED3746E21189F79003A78D5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = "/Users/kevinlima/Documents/Documents - Kevin’s MacBook Pro/Solutions/Personal/Swift/Sunset/Sunset/FirstViewController.swift"; sourceTree = "<absolute>"; };
+		7ED3746F21189F79003A78D5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = "/Users/kevinlima/Documents/Documents - Kevin’s MacBook Pro/Solutions/Personal/Swift/Sunset/Sunset/SecondViewController.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,9 @@
 			children = (
 				7E14C3C11E63865600812F46 /* AppDelegate.swift */,
 				7E14C3C31E63865600812F46 /* ViewController.swift */,
+				7ED3746E21189F79003A78D5 /* FirstViewController.swift */,
+				7ED3746F21189F79003A78D5 /* SecondViewController.swift */,
+				7E349A442118A39E00957FBB /* PageSwitchViewController.swift */,
 				7E14C3F21E644B4700812F46 /* Sun.swift */,
 				7E14C3F41E645EE800812F46 /* Location.swift */,
 				7E14C3C51E63865600812F46 /* Main.storyboard */,
@@ -324,11 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED3747221189F79003A78D5 /* SecondViewController.swift in Sources */,
+				7E349A452118A39E00957FBB /* PageSwitchViewController.swift in Sources */,
 				7ECE8E441FB48BED00D56D72 /* SettingsView.swift in Sources */,
 				7E14C3CA1E63865600812F46 /* Sunset.xcdatamodeld in Sources */,
 				7E14C3C41E63865600812F46 /* ViewController.swift in Sources */,
 				7E3F4BAA1E68B61900E7680D /* Reachability.swift in Sources */,
 				7E14C3F51E645EE800812F46 /* Location.swift in Sources */,
+				7ED3747121189F79003A78D5 /* FirstViewController.swift in Sources */,
 				7E14C3F31E644B4700812F46 /* Sun.swift in Sources */,
 				7E14C3C21E63865600812F46 /* AppDelegate.swift in Sources */,
 			);
