@@ -15,6 +15,9 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(FirstViewController.receiveLocation(notification:)), name: Notification.Name("locationReady"), object: nil)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
         self.reloadPresentation()
     }
     
@@ -22,20 +25,23 @@ class FirstViewController: UIViewController {
      Receives the notification that theres a new location to be used
      */
     @objc func receiveLocation(notification:Notification){
-        print("Present Location notification received")
-        if let location = notification.userInfo?["location"] as? [String]{
-            self.city = location[0]
-            self.country = location[1]
-        }
         reloadPresentation()
     }
     
     func reloadPresentation(){
         if (self.cityLabel != nil){
-            self.cityLabel.text = self.city
+            if let userCity = UserDefaults.standard.object(forKey: "city") as? String{
+                self.cityLabel.text = userCity
+            }else{
+                self.cityLabel.text = "Loading"
+            }
         }
         if (self.countryLabel != nil){
-            self.countryLabel.text = self.country
+            if let userCountry = UserDefaults.standard.object(forKey: "country") as? String{
+                self.countryLabel.text = userCountry
+            }else{
+                self.countryLabel.text = "Loading"
+            }
         }
     }
 }

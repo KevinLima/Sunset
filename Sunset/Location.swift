@@ -45,13 +45,12 @@ class Location: NSObject, CLLocationManagerDelegate{
 							self.city = placemark.locality!
 							self.country = placemark.country!
                             
-                            let locationDict: [String:[String]] = ["location": [self.city, self.country]]
+                            // Store data locally (to disk)
+                            UserDefaults.standard.set(self.city, forKey: "city")
+                            UserDefaults.standard.set(self.country, forKey: "country")
                             
                             // VC to display new lcoation
-							NotificationCenter.default.post(name: Notification.Name("receiveLocation"), object: nil)
-                            
-                            // VC to display new sun profile 
-							NotificationCenter.default.post(name: Notification.Name("retrieveSunProfile"), object: nil)
+							NotificationCenter.default.post(name: Notification.Name("locationReady"), object: nil)
 						}
 					}else{
 						print("Error while obtaining city")

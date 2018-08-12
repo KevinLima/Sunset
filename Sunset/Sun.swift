@@ -20,7 +20,7 @@ class Sun:NSObject{
 	
 	override init(){
 		super.init()
-		NotificationCenter.default.addObserver(self, selector: #selector(Sun.retrieveSunProfile(notification:)), name: Notification.Name("retrieveSunProfile"), object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(Sun.retrieveSunProfile(notification:)), name: Notification.Name("locationReady"), object: nil)
 	}
 	
 	@objc func retrieveSunProfile(notification:Notification){
