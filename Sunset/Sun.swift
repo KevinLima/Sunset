@@ -118,12 +118,13 @@ class Sun:NSObject{
 	}
 	
 	func setData(){
-		self.sunset = self.results["sunset"] as! String
-		self.sunrise = self.results["sunrise"] as! String
+        // day length is not in the getValues array because it's not a date
 		self.dayLength = self.results["day_length"] as! String
         
-        let sunProfileDict: [String: [Date]] = ["sunProfile": self.getValues()]
-        NotificationCenter.default.post(name: NSNotification.Name("reloadData"), object: nil, userInfo: sunProfileDict)
+        UserDefaults.standard.set(getValues(), forKey: "sunProfileDates")
+        UserDefaults.standard.set(self.results["day_length"] as! String, forKey: "dayLength")
+        NotificationCenter.default.post(name: NSNotification.Name("reloadData"), object: nil)
+        
 	}
     func getDataCount()->Int{
         return 9

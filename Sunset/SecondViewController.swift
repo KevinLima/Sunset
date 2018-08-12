@@ -26,9 +26,7 @@ class SecondViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         tableView.dataSource = self
         NotificationCenter.default.addObserver(self, selector: #selector(SecondViewController.reloadData(notification:)), name: Notification.Name("reloadData"), object: nil)
-    }
-    func receiveData(dataValues: [Date]){
-        self.dataValues = dataValues
+        self.displayData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,7 +57,11 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     
     @objc func reloadData(notification:Notification){
         print("Reload data notification recieved")
-        if let sunProfile = notification.userInfo?["sunProfile"] as? [Date]{
+        self.displayData()
+    }
+    
+    func displayData(){
+        if let sunProfile = UserDefaults.standard.object(forKey: "sunProfileDates") as? [Date]{
             self.dataValues = sunProfile
         }
         self.tableView.reloadData()
