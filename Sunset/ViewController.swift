@@ -9,22 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var twentyFourHourClock = true
 	
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        
-		
         
         // Double tap
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
         doubleTap.numberOfTapsRequired = 2
         view.addGestureRecognizer(doubleTap)
 	}
+    @IBAction func infoButton(_ sender: Any) {
+    }
     
     @objc func doubleTapped(){
-        self.twentyFourHourClock = !self.twentyFourHourClock
+        NotificationCenter.default.post(name: NSNotification.Name("doubleTapped"), object: nil)
     }
 }
 

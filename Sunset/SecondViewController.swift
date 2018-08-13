@@ -25,8 +25,15 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        
         NotificationCenter.default.addObserver(self, selector: #selector(SecondViewController.reloadData(notification:)), name: Notification.Name("reloadData"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SecondViewController.doubleTapped(notification:)), name: Notification.Name("doubleTapped"), object: nil)
+        
         self.displayData()
+        if let clockState = UserDefaults.standard.object(forKey: "twentyFourHourClock") as? Bool{
+            self.twentyFourHourClock = clockState
+        }
+        self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,12 +65,17 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     @objc func reloadData(notification:Notification){
         print("Reload data notification recieved")
         self.displayData()
+        self.tableView.reloadData()
+    }
+    @objc func doubleTapped(notification:Notification){
+        self.twentyFourHourClock = !self.twentyFourHourClock
+        UserDefaults.standard.set(self.twentyFourHourClock, forKey: "twentyFourHourClock")
+        self.tableView.reloadData()
     }
     
     func displayData(){
         if let sunProfile = UserDefaults.standard.object(forKey: "sunProfileDates") as? [Date]{
             self.dataValues = sunProfile
         }
-        self.tableView.reloadData()
     }
 }
