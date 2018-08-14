@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(doubleTap)
 	}
     @IBAction func infoButton(_ sender: Any) {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "InformationViewController") as UIViewController
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc func doubleTapped(){

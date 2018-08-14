@@ -19,6 +19,7 @@
 		7E14C3F51E645EE800812F46 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3F41E645EE800812F46 /* Location.swift */; };
 		7E14C3F81E65ACF500812F46 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E14C3F71E65ACF500812F46 /* MapKit.framework */; };
 		7E349A452118A39E00957FBB /* PageSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E349A442118A39E00957FBB /* PageSwitchViewController.swift */; };
+		7E349A472121AF7500957FBB /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E349A462121AF7500957FBB /* InformationViewController.swift */; };
 		7E3F4BAA1E68B61900E7680D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3F4BA91E68B61900E7680D /* Reachability.swift */; };
 		7E3F4BB01E69FD7800E7680D /* SofiaProExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAC1E69FD7800E7680D /* SofiaProExtraLight.otf */; };
 		7E3F4BB11E69FD7800E7680D /* SofiaProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */; };
@@ -67,6 +68,7 @@
 		7E14C3F41E645EE800812F46 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		7E14C3F71E65ACF500812F46 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7E349A442118A39E00957FBB /* PageSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSwitchViewController.swift; sourceTree = "<group>"; };
+		7E349A462121AF7500957FBB /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		7E3F4BA91E68B61900E7680D /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7E3F4BAC1E69FD7800E7680D /* SofiaProExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProExtraLight.otf; sourceTree = "<group>"; };
 		7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProLight.otf; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				7E349A442118A39E00957FBB /* PageSwitchViewController.swift */,
 				7E14C3F21E644B4700812F46 /* Sun.swift */,
 				7E14C3F41E645EE800812F46 /* Location.swift */,
+				7E349A462121AF7500957FBB /* InformationViewController.swift */,
 				7E14C3C51E63865600812F46 /* Main.storyboard */,
 				7E14C3CB1E63865600812F46 /* Assets.xcassets */,
 				7E14C3CD1E63865600812F46 /* LaunchScreen.storyboard */,
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED3747221189F79003A78D5 /* SecondViewController.swift in Sources */,
+				7E349A472121AF7500957FBB /* InformationViewController.swift in Sources */,
 				7E349A452118A39E00957FBB /* PageSwitchViewController.swift in Sources */,
 				7ECE8E441FB48BED00D56D72 /* SettingsView.swift in Sources */,
 				7E14C3CA1E63865600812F46 /* Sunset.xcdatamodeld in Sources */,
