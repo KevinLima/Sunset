@@ -2,18 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/kevinlima/Documents/Documents - Kevin&#x2019;s MacBook Pro/Solutions/Personal/Swift/Sunset/Sunset/SecondViewController.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/kevinlima/Documents/Documents - Kevin&#x2019;s MacBook Pro/Solutions/Personal/Swift/Sunset/Sunset/FirstViewController.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/kevinlima/Documents/Documents - Kevin&#x2019;s MacBook Pro/Solutions/Personal/Swift/Sunset/Sunset/PageViewController.swift">
-   </FileRef>
-   <FileRef
-      location = "group:../../../../../../../Downloads/Sol-master/Sol/Sol/Resources/Fonts/Climacons.ttf">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

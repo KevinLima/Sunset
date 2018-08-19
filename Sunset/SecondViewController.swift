@@ -46,7 +46,8 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reusableCell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath)
         if self.dataValues.isEmpty{
-            reusableCell.textLabel?.text = "Row \(indexPath.row)"
+            reusableCell.textLabel?.text = self.dataKeys[indexPath.row]
+            reusableCell.detailTextLabel?.text = "Loading"
         }else{
             reusableCell.textLabel?.text = self.dataKeys[indexPath.row]
             
