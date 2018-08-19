@@ -25,8 +25,6 @@
 		7E3F4BB11E69FD7800E7680D /* SofiaProLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */; };
 		7E3F4BB21E69FD7800E7680D /* SofiaProRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAE1E69FD7800E7680D /* SofiaProRegular.otf */; };
 		7E3F4BB31E69FD7800E7680D /* SofiaProSemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3F4BAF1E69FD7800E7680D /* SofiaProSemiBold.otf */; };
-		7ECE8E441FB48BED00D56D72 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECE8E431FB48BED00D56D72 /* SettingsView.swift */; };
-		7ECE8E461FB48C1D00D56D72 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */; };
 		7ED3746A2118777B003A78D5 /* Climacons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED374692118777B003A78D5 /* Climacons.ttf */; };
 		7ED3747121189F79003A78D5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3746E21189F79003A78D5 /* FirstViewController.swift */; };
 		7ED3747221189F79003A78D5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3746F21189F79003A78D5 /* SecondViewController.swift */; };
@@ -74,8 +72,6 @@
 		7E3F4BAD1E69FD7800E7680D /* SofiaProLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProLight.otf; sourceTree = "<group>"; };
 		7E3F4BAE1E69FD7800E7680D /* SofiaProRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProRegular.otf; sourceTree = "<group>"; };
 		7E3F4BAF1E69FD7800E7680D /* SofiaProSemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SofiaProSemiBold.otf; sourceTree = "<group>"; };
-		7ECE8E431FB48BED00D56D72 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
 		7ED374692118777B003A78D5 /* Climacons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Climacons.ttf; sourceTree = "<group>"; };
 		7ED3746E21189F79003A78D5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = "/Users/kevinlima/Documents/Documents - Kevin’s MacBook Pro/Solutions/Personal/Swift/Sunset/Sunset/FirstViewController.swift"; sourceTree = "<absolute>"; };
 		7ED3746F21189F79003A78D5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = "/Users/kevinlima/Documents/Documents - Kevin’s MacBook Pro/Solutions/Personal/Swift/Sunset/Sunset/SecondViewController.swift"; sourceTree = "<absolute>"; };
@@ -145,8 +141,6 @@
 				7E14C3D01E63865600812F46 /* Info.plist */,
 				7E14C3C81E63865600812F46 /* Sunset.xcdatamodeld */,
 				7E3F4BA91E68B61900E7680D /* Reachability.swift */,
-				7ECE8E431FB48BED00D56D72 /* SettingsView.swift */,
-				7ECE8E451FB48C1D00D56D72 /* SettingsView.xib */,
 				7E3F4BAB1E69FCEA00E7680D /* Fonts */,
 			);
 			path = Sunset;
@@ -309,7 +303,6 @@
 				7E3F4BB11E69FD7800E7680D /* SofiaProLight.otf in Resources */,
 				7E14C3CC1E63865600812F46 /* Assets.xcassets in Resources */,
 				7E14C3C71E63865600812F46 /* Main.storyboard in Resources */,
-				7ECE8E461FB48C1D00D56D72 /* SettingsView.xib in Resources */,
 				7E3F4BB21E69FD7800E7680D /* SofiaProRegular.otf in Resources */,
 				7E3F4BB31E69FD7800E7680D /* SofiaProSemiBold.otf in Resources */,
 			);
@@ -339,7 +332,6 @@
 				7ED3747221189F79003A78D5 /* SecondViewController.swift in Sources */,
 				7E349A472121AF7500957FBB /* InformationViewController.swift in Sources */,
 				7E349A452118A39E00957FBB /* PageSwitchViewController.swift in Sources */,
-				7ECE8E441FB48BED00D56D72 /* SettingsView.swift in Sources */,
 				7E14C3CA1E63865600812F46 /* Sunset.xcdatamodeld in Sources */,
 				7E14C3C41E63865600812F46 /* ViewController.swift in Sources */,
 				7E3F4BAA1E68B61900E7680D /* Reachability.swift in Sources */,
