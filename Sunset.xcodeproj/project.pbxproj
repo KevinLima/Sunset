@@ -10,7 +10,6 @@
 		7E14C3C21E63865600812F46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3C11E63865600812F46 /* AppDelegate.swift */; };
 		7E14C3C41E63865600812F46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3C31E63865600812F46 /* ViewController.swift */; };
 		7E14C3C71E63865600812F46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E14C3C51E63865600812F46 /* Main.storyboard */; };
-		7E14C3CA1E63865600812F46 /* Sunset.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3C81E63865600812F46 /* Sunset.xcdatamodeld */; };
 		7E14C3CC1E63865600812F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E14C3CB1E63865600812F46 /* Assets.xcassets */; };
 		7E14C3CF1E63865600812F46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E14C3CD1E63865600812F46 /* LaunchScreen.storyboard */; };
 		7E14C3DA1E63865600812F46 /* SunsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14C3D91E63865600812F46 /* SunsetTests.swift */; };
@@ -52,7 +51,6 @@
 		7E14C3C11E63865600812F46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E14C3C31E63865600812F46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E14C3C61E63865600812F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7E14C3C91E63865600812F46 /* Sunset.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sunset.xcdatamodel; sourceTree = "<group>"; };
 		7E14C3CB1E63865600812F46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E14C3CE1E63865600812F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E14C3D01E63865600812F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				7E14C3CB1E63865600812F46 /* Assets.xcassets */,
 				7E14C3CD1E63865600812F46 /* LaunchScreen.storyboard */,
 				7E14C3D01E63865600812F46 /* Info.plist */,
-				7E14C3C81E63865600812F46 /* Sunset.xcdatamodeld */,
 				7E3F4BA91E68B61900E7680D /* Reachability.swift */,
 				7E3F4BAB1E69FCEA00E7680D /* Fonts */,
 			);
@@ -332,7 +329,6 @@
 				7ED3747221189F79003A78D5 /* SecondViewController.swift in Sources */,
 				7E349A472121AF7500957FBB /* InformationViewController.swift in Sources */,
 				7E349A452118A39E00957FBB /* PageSwitchViewController.swift in Sources */,
-				7E14C3CA1E63865600812F46 /* Sunset.xcdatamodeld in Sources */,
 				7E14C3C41E63865600812F46 /* ViewController.swift in Sources */,
 				7E3F4BAA1E68B61900E7680D /* Reachability.swift in Sources */,
 				7E14C3F51E645EE800812F46 /* Location.swift in Sources */,
@@ -632,19 +628,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7E14C3C81E63865600812F46 /* Sunset.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7E14C3C91E63865600812F46 /* Sunset.xcdatamodel */,
-			);
-			currentVersion = 7E14C3C91E63865600812F46 /* Sunset.xcdatamodel */;
-			path = Sunset.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7E14C3B61E63865600812F46 /* Project object */;
 }
