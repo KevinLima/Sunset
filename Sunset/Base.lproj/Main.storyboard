@@ -343,7 +343,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="khI-bY-pfl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -385,7 +385,7 @@
                             <constraint firstItem="khI-bY-pfl" firstAttribute="trailing" secondItem="Wi2-ln-Qil" secondAttribute="trailing" id="YnJ-pt-ZLO"/>
                             <constraint firstItem="khI-bY-pfl" firstAttribute="top" secondItem="EQW-mD-YRa" secondAttribute="top" id="lzl-BX-Swe"/>
                             <constraint firstItem="khI-bY-pfl" firstAttribute="leading" secondItem="Wi2-ln-Qil" secondAttribute="leading" id="ruB-Xc-hSW"/>
-                            <constraint firstItem="Wi2-ln-Qil" firstAttribute="bottom" secondItem="khI-bY-pfl" secondAttribute="bottom" constant="50" id="s0B-TK-DSi"/>
+                            <constraint firstItem="Wi2-ln-Qil" firstAttribute="bottom" secondItem="khI-bY-pfl" secondAttribute="bottom" constant="20" id="s0B-TK-DSi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wi2-ln-Qil"/>
                     </view>

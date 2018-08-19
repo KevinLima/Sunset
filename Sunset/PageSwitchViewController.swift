@@ -14,7 +14,6 @@ class PageViewSwitchController: UIPageViewController, UIPageViewControllerDataSo
         let secondVC: UIViewController = storyBoard.instantiateViewController(withIdentifier: "SecondViewController")
         return [firstVC, secondVC]
     }()
-    var pageControl = UIPageControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
@@ -22,20 +21,14 @@ class PageViewSwitchController: UIPageViewController, UIPageViewControllerDataSo
         if let firstViewController = viewControllerList.first{
             self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
-        
-        pageControl = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY - 50, width: UIScreen.main.bounds.width, height: 50))
-        pageControl.numberOfPages = self.viewControllerList.count
-        pageControl.currentPage = 0
-        pageControl.tintColor = UIColor.black
-        pageControl.pageIndicatorTintColor = UIColor.white
-        pageControl.currentPageIndicatorTintColor = UIColor.black
-        pageControl.backgroundColor = UIColor.green
-        self.view.addSubview(pageControl)
     }
     
-    public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool){
-        let pageContentViewController = pageViewController.viewControllers![0]
-        self.pageControl.currentPage = viewControllerList.index(of: pageContentViewController)!
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return 2
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
