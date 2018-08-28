@@ -18,50 +18,59 @@ class Location: NSObject, CLLocationManagerDelegate{
 	private var country: String = ""
 	private let locationManager = CLLocationManager()
 	private var notificationWasSend:Bool = false
+    
+    var userLocation:CLLocation = CLLocation()
 	
 	override init() {
 		super.init()
-		
+        
 		locationManager.delegate = self
 		locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
 		locationManager.requestWhenInUseAuthorization()
 		locationManager.requestLocation()
 	}
-	
-	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-		DispatchQueue.main.async {
-			let userLocation:CLLocation = locations.first!
-			if !self.notificationWasSend{
-				self.notificationWasSend = true
-				self.longitude = String(format:"%f", userLocation.coordinate.longitude)
-				self.latitude = String(format:"%f", userLocation.coordinate.latitude)
-				
-				self.locationManager.stopUpdatingLocation()
-				
-				CLGeocoder().reverseGeocodeLocation(userLocation, completionHandler: {(placemarks, error)-> Void in
-					if placemarks != nil{
-						if placemarks!.count > 0{
-							let placemark = placemarks![0]
-							self.city = placemark.locality!
-							self.country = placemark.country!
+    
+    func loadLocation(){
+        print("LoadLocation")
+        DispatchQueue.main.async {
+            if !self.notificationWasSend{
+                self.notificationWasSend = true
+                self.longitude = String(format:"%f", self.userLocation.coordinate.longitude)
+                self.latitude = String(format:"%f", self.userLocation.coordinate.latitude)
+                
+                self.locationManager.stopUpdatingLocation()
+                
+                CLGeocoder().reverseGeocodeLocation(self.userLocation, completionHandler: {(placemarks, error)-> Void in
+                    if placemarks != nil{
+                        if placemarks!.count > 0{
+                            let placemark = placemarks![0]
+                            self.city = placemark.locality!
+                            self.country = placemark.country!
                             
                             // Store data locally (to disk)
                             UserDefaults.standard.set(self.city, forKey: "city")
                             UserDefaults.standard.set(self.country, forKey: "country")
                             
                             // VC to display new lcoation
-							NotificationCenter.default.post(name: Notification.Name("locationReady"), object: nil)
-						}
-					}else{
-						print("Error while obtaining city")
-					}
-					if error != nil{
-						print(error!)
-					}
-				
-				})
-			}
-		}
+                            print("City: \(self.city)")
+                            self.notificationWasSend = false
+                            NotificationCenter.default.post(name: Notification.Name("locationReady"), object: nil)
+                        }
+                    }else{
+                        print("Error while obtaining city")
+                    }
+                    if error != nil{
+                        print(error!)
+                    }
+                    
+                })
+            }
+        }
+    }
+	
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.userLocation = locations.first!
+		self.loadLocation()
 	}
 	
 	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

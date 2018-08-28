@@ -21,6 +21,8 @@ class Sun:NSObject{
 	override init(){
 		super.init()
 		NotificationCenter.default.addObserver(self, selector: #selector(Sun.retrieveSunProfile(notification:)), name: Notification.Name("locationReady"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Sun.reloadLocation(notification:)), name: Notification.Name("shaked"), object: nil)
+        print("I am alive!")
 	}
 	
 	@objc func retrieveSunProfile(notification:Notification){
@@ -32,7 +34,10 @@ class Sun:NSObject{
 			print("Internet Connection not Available!")
 		}
 	}
-	
+    
+    @objc func reloadLocation(notification:Notification){
+        self.location.loadLocation()
+    }
 	
 	func getSunset()->String{
 		return sunset
